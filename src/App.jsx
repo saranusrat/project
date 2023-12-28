@@ -1,11 +1,7 @@
 import Banner from "./Components/Layouts/Banner"
-import BestSeller from "./Components/Layouts/BestSeller"
 import Footer from "./Components/Layouts/Footer"
 import Header from "./Components/Layouts/Header"
-import Phone from "./Components/Layouts/Phone"
-import Products from "./Components/Layouts/Products"
-import Sale from "./Components/Layouts/Sale"
-import Special from "./Components/Layouts/Special"
+import Home from "./Components/Layouts/Home";
 import Subheader from "./Components/Layouts/Subheader"
 import React, { useRef, useState } from "react";
 
@@ -22,20 +18,16 @@ function App() {
       setHover(false);
     }
   };
-
   return (
     <>
-<div onClick={add}>
+
 <Header/>
-<Subheader hoverMenu={hoverMenu} hover={hover} clickMenu={clickMenu}/>
+<div onClick={add}>
+<Subheader hoverMenu={hoverMenu} hover={hover} clickMenu={clickMenu}/></div>
 <Banner/>
-<Sale/>
-<Products/>
-<BestSeller/>
-<Phone/>
-<Special/>
+<Home/>
 <Footer/>
-</div>
+
     </>
   );
 }
